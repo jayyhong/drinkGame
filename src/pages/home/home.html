@@ -6,6 +6,16 @@
 
 <ion-content padding>
 
-  
+  <button class="shuffle" ion-button (click)="shuffleDeck()">Shuffle</button>
+  <button class="shuffle" ion-button (click)="pullCard()">Pull Card</button>
+
+  <div id="cardContainer">
+    <div class="cardName">
+      {{this.currentCard.name}}
+    </div>
+    <div class="cardDescription">
+      {{this.currentCard.description}}
+    </div>
+  </div>
 
 </ion-content>
