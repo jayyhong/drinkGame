@@ -15,19 +15,24 @@ export class AboutPage {
   }
 
   ngOnInit() {
-    this.start();
+    //play cup shuffling animation, after animation is done, then set the current
+    //position of ball
+    this.currentPosition = Math.floor(Math.random() * 3);
   }
 
   start () {
     //play animation and set currrent position of ball to a number
-    this.currentPosition = Math.floor(Math.random() * 3)
+    this.currentPosition = Math.floor(Math.random() * 3);
     console.log(this.currentPosition)
   }
 
   select() {
     console.log(event.target.className)
+    console.log(event.target.style.marginTop = "-50px")
     if (event.target.className.includes(this.positionArray[this.currentPosition])) {
-      console.log('yes')
+      console.log('Win')
+    } else {
+      console.log('Lose')
     }
   }
 
