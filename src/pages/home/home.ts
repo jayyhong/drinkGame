@@ -49,6 +49,12 @@ export class HomePage {
 
   shuffleDeck() {
     this.shuffledDeck = [];
+    this.currentCard = {
+      name: "",
+      description: "",
+      count: "",
+      image: ""
+    };
     this.cards = this.cardDataBank.slice();
     while (this.cards.length > 0) {
       let random = Math.floor(Math.random() * this.cards.length);
